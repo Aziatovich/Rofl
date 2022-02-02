@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body style="background: linear-gradient(to bottom left, #3399ff 0%, #ff66cc 100%);">
+
+    <style type="text/css">
+    	.gra {
+    		margin-left: auto;
+    		margin-right: 40px; 
+    		background: linear-gradient(to bottom left, #cc00ff 29%, #0033cc 100%); 
+    		height: 60px; 
+    		border-radius: 25px;
+    		transition: 0.5s;
+    	}
+    	.h {
+    		font-family: Arial; 
+    		font-size: 35px; 
+    		margin-left: auto; 
+    		margin-top: 7px;
+    		transition: 0.5s;
+    	}
+    	.gra:hover {
+    		height: 70px;
+    	}
+    </style>
+
+
+<div class="q0 col-6 mx-auto" style="height: 800px; margin-left: 300px;">
+	<img src='autism.jfif' style="width: 600px; border-radius: 20px; margin-top: 20px;">
+	<div style="font-size: 30px;">Тест: На болезнь аутизма</div>
+	<h1>Нажмите на кпопку что бы начать:</h1>
+	<div class="d-flex">
+	    <div class="mx-auto"><button class="col-12 gra otvet0" style="border: none;"><h1 class="h">НАЧАТЬ</h1></button></div>
+	</div>
+</div>
+<div class="q1 mx-auto col-6" style="height: 800px; margin-left: 300px; display: none">
+	<img src='images.jfif' style="width: 600px; border-radius: 20px; margin-top: 20px;">
+	<div style="font-size: 30px;">Вопрос №1</div>
+	<h1>Вам есть 14 лет?:</h1>
+	<div class="d-flex mx-auto">
+	    <div class=""><button class="col-12 gra otvet1" style="border: none;"><h1 class="h">Нет</h1></button></div>
+	    <div class="" style="margin-left: 50px;"><button class="col-12 gra otvet2" style="border: none;"><h1 class="h">Да</h1></button></div>
+    </div>
+</div>
+<div class="q2 mx-auto col-6" style="height: 800px; margin-left: 300px; display: none;">
+	<img src="images (1).jfif" style="width: 600px; border-radius: 20px; margin-top: 20px;">
+	<div style="font-size: 30px;">Вопрос №2</div>
+	<h1>Вы мужского пола?:</h1>
+	<div class="d-flex mx-auto">
+	    <div class=""><button class="col-12 gra otvet11" style="border: none;"><h1 class="h">Нет</h1></button></div>
+	    <div class="" style="margin-left: 50px;"><button class="col-12 gra otvet12" style="border: none;"><h1 class="h">Да</h1></button></div>
+    </div>
+</div>
+<div class="q3 mx-auto col-6" style="height: 800px; margin-left: 300px; display: none;">
+	<img src="1280_864_max.jpeg" style="width: 600px; border-radius: 20px; margin-top: 20px;">
+	<div style="font-size: 30px;">Вопрос №3</div>
+	<h1>Ваша имя начинается на Г или на Н?:</h1>
+	<div class="d-flex mx-auto">
+	    <div class=""><button class="col-12 gra otvet111" style="border: none;"><h1 class="h">Нет</h1></button></div>
+	    <div class="" style="margin-left: 50px;"><button class="col-12 gra otvet122" style="border: none;"><h1 class="h">Да</h1></button></div>
+    </div>
+</div>
+<div class="q4 mx-auto col-6" style="height: 800px; margin-left: 300px; display: none;">
+	<img src="images (2).jfif" style="width: 500px; border-radius: 10px;">\
+	<div style="font-size: 30px;">ВЫВОД</div>
+	<h1>Поздравляю вы болеете аутизмом:</h1>
+	<div class="mx-auto">
+	    <div class=""><button class="col-8 gra otvet1111" style="border: none;"><h1 class="h">Закончить тест</h1></button></div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	document.querySelector('.q0').onclick = function() {
+
+    document.querySelector('.otvet0').onclick = function() {
+    	alert("Начать тест?")
+    	document.querySelector('.q0').style.display = "none";
+        document.querySelector('.q1').style.display = "block";
+    }
+    }
+
+
+	document.querySelector('.q1').onclick = function() {
+
+    document.querySelector('.otvet1').onclick = function() {
+    	alert("Если вам нет 14 то вы не должны проходить этот тест")
+    }
+    document.querySelector('.otvet2').onclick = function() {
+    	alert("Продолжить тест?")
+    	document.querySelector('.q1').style.display = "none";
+        document.querySelector('.q2').style.display = "block";
+    }
+    }
+
+
+	document.querySelector('.q2').onclick = function() {
+		document.querySelector('.otvet11').onclick = function() {
+    	alert("Этот тест призназначен только мужскому полу")
+    }
+    document.querySelector('.otvet12').onclick = function() {
+    	alert("Продолжить тест?")
+    	document.querySelector('.q2').style.display = "none";
+        document.querySelector('.q3').style.display = "block";
+        document.querySelector('.q4').style.display = "none";
+
+    }
+	}
+
+
+	document.querySelector('.q3').onclick = function() {
+		document.querySelector('.otvet111').onclick = function() {
+    	alert("Поздравляю вы не болеете аутизмом")
+    	document.querySelector('.q3').style.display = "none";
+    	document.querySelector('.q0').style.display = "block";
+    }
+        document.querySelector('.otvet122').onclick = function() {
+    	alert("Продолжить тест?")
+        document.querySelector('.q3').style.display = "none";
+        document.querySelector('.q4').style.display = "block";
+
+    }
+	}
+
+
+	document.querySelector('.q4').onclick = function() {
+		document.querySelector('.otvet1111').onclick = function() {
+    	alert("Нажмите ДА что бы начать тест заново")
+    	document.querySelector('.q4').style.display = "none";
+        document.querySelector('.q0').style.display = "block";
+    }
+	}
+
+</script>	
+</body>
+</html>
